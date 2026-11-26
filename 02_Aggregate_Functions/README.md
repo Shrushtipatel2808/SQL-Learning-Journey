@@ -11,7 +11,7 @@ The queries are written as part of my SQL learning journey, with a focus on unde
 | Database | `Db_1` |
 | Table | `employees_practice` |
 | Platform | Google BigQuery |
-| Practice Questions | Q16–Q52 |
+| Practice Questions | Q16–Q63 |
 
 ## Concepts Covered
 
@@ -27,6 +27,7 @@ The queries are written as part of my SQL learning journey, with a focus on unde
 - `GROUP BY` – Group records based on columns
 - `HAVING` – Filter grouped results
 - Combining multiple aggregate conditions
+- Grouping using multiple columns
 
 ### 3. Conditional Analysis
 - `CASE WHEN` statements
@@ -43,7 +44,19 @@ The queries are written as part of my SQL learning journey, with a focus on unde
 - `BETWEEN` operator
 - Using `LIMIT`
 
-### 5. Data Analysis Practice
+### 5. HAVING Practice
+- `HAVING` with `COUNT()`
+- `HAVING` with `SUM()`
+- `HAVING` with `AVG()`
+- `HAVING` with `MIN()` and `MAX()`
+- Combining `WHERE` and `HAVING`
+- Multiple conditions using `AND`
+- `HAVING` with `BETWEEN`
+- `HAVING` with multiple columns in `GROUP BY`
+- `HAVING` with `COUNT(DISTINCT)`
+- Conditional aggregation with `HAVING`
+
+### 6. Data Analysis Practice
 - Employee count by department
 - Department-wise salary summaries
 - City-wise employee analysis
@@ -61,6 +74,9 @@ The queries are written as part of my SQL learning journey, with a focus on unde
 | Q32–Q37 | CASE WHEN and Conditional Counting |
 | Q38–Q44 | Advanced Aggregate Analysis |
 | Q45–Q52 | Additional ORDER BY Practice |
+| Q53–Q57 | Basic HAVING Practice |
+| Q58–Q62 | Medium HAVING Practice |
+| Q63 | Advanced HAVING Practice |
 
 ## Repository Structure
 
@@ -78,6 +94,7 @@ The queries are written as part of my SQL learning journey, with a focus on unde
 - Filter aggregated results using `HAVING`.
 - Apply conditional logic using `CASE WHEN`.
 - Sort query results using `ORDER BY`.
+- Combine filtering and grouping conditions.
 - Write SQL queries for practical data analysis scenarios.
 
 ## Tools Used
