@@ -2,7 +2,7 @@
 
 This module focuses on practicing SQL aggregate functions and analyzing employee data using Google BigQuery.
 
-The queries are written as part of my SQL learning journey, with a focus on understanding how to summarize, group, filter, and analyze data.
+The queries are written as part of my SQL learning journey, with a focus on understanding how to summarize, group, filter, analyze, and sort data.
 
 ## Dataset Information
 
@@ -11,7 +11,7 @@ The queries are written as part of my SQL learning journey, with a focus on unde
 | Database | `Db_1` |
 | Table | `employees_practice` |
 | Platform | Google BigQuery |
-| Practice Questions | Q16–Q44 |
+| Practice Questions | Q16–Q52 |
 
 ## Concepts Covered
 
@@ -26,7 +26,6 @@ The queries are written as part of my SQL learning journey, with a focus on unde
 ### 2. Grouping and Filtering
 - `GROUP BY` – Group records based on columns
 - `HAVING` – Filter grouped results
-- `ORDER BY` – Sort query results
 - Combining multiple aggregate conditions
 
 ### 3. Conditional Analysis
@@ -35,12 +34,22 @@ The queries are written as part of my SQL learning journey, with a focus on unde
 - Salary categorization (High, Medium, Low)
 - Department-wise salary analysis
 
-### 4. Data Analysis Practice
+### 4. Sorting and Filtering
+- `ORDER BY` with `ASC` and `DESC`
+- Sorting using multiple columns
+- Sorting grouped results
+- `IN` operator
+- `LIKE` operator
+- `BETWEEN` operator
+- Using `LIMIT`
+
+### 5. Data Analysis Practice
 - Employee count by department
 - Department-wise salary summaries
 - City-wise employee analysis
 - Average, highest and lowest salary analysis
 - Multiple-column grouping
+- Finding employees based on salary and age
 
 ## Practice Overview
 
@@ -51,6 +60,7 @@ The queries are written as part of my SQL learning journey, with a focus on unde
 | Q26–Q31 | HAVING and Combined Conditions |
 | Q32–Q37 | CASE WHEN and Conditional Counting |
 | Q38–Q44 | Advanced Aggregate Analysis |
+| Q45–Q52 | Additional ORDER BY Practice |
 
 ## Repository Structure
 
@@ -67,6 +77,7 @@ The queries are written as part of my SQL learning journey, with a focus on unde
 - Analyze grouped data using `GROUP BY`.
 - Filter aggregated results using `HAVING`.
 - Apply conditional logic using `CASE WHEN`.
+- Sort query results using `ORDER BY`.
 - Write SQL queries for practical data analysis scenarios.
 
 ## Tools Used
