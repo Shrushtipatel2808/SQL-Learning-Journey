@@ -1,0 +1,11 @@
+-- SQL Learning Journey
+-- Topic: SQL Joins
+-- Database: Db_1
+-- Platform: Google BigQuery
+
+-- Topics Covered:
+-- INNER JOIN
+-- LEFT JOIN
+-- RIGHT JOIN
+-- FULL OUTER JOIN
+-- SELF JOIN
