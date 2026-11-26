@@ -314,3 +314,100 @@ SELECT
 FROM `Db_1.employees_practice`
 GROUP BY Department
 ORDER BY Total_Employees DESC;
+
+
+
+-- ORDER BY - Practice Questions
+
+
+-- Q45. Display employees sorted by age.
+-- If age is same, show higher salary first.
+
+SELECT
+    Name,
+    Age,
+    Salary
+FROM `Db_1.employees_practice`
+ORDER BY Age ASC, Salary DESC;
+
+
+-- Q46. Find employees having salary between 30000 and 60000.
+-- Show highest salary first.
+
+SELECT
+    Name,
+    Salary
+FROM `Db_1.employees_practice`
+WHERE Salary BETWEEN 30000 AND 60000
+ORDER BY Salary DESC;
+
+
+-- Q47. Display employees from Ahmedabad or Mumbai.
+-- Sort city name A to Z and salary high to low.
+
+SELECT
+    Name,
+    City,
+    Salary
+FROM `Db_1.employees_practice`
+WHERE City IN ('Ahmedabad', 'Mumbai')
+ORDER BY City ASC, Salary DESC;
+
+
+-- Q48. Find employees whose name starts with A.
+-- Display names in alphabetical order.
+
+SELECT
+    Name,
+    Department,
+    Salary
+FROM `Db_1.employees_practice`
+WHERE Name LIKE 'A%'
+ORDER BY Name ASC;
+
+
+-- Q49. Display employees whose age is greater than 25.
+-- Sort age from highest to lowest.
+-- If age is same, sort name A to Z.
+
+SELECT
+    Name,
+    Age
+FROM `Db_1.employees_practice`
+WHERE Age > 25
+ORDER BY Age DESC, Name ASC;
+
+
+-- Q50. Find average salary of each department.
+-- Show department with lowest average salary first.
+
+SELECT
+    Department,
+    ROUND(AVG(Salary), 2) AS Average_Salary
+FROM `Db_1.employees_practice`
+GROUP BY Department
+ORDER BY Average_Salary ASC;
+
+
+-- Q51. Display 5 employees having the lowest salary.
+-- If salary is same, sort by name.
+
+SELECT
+    Name,
+    Salary
+FROM `Db_1.employees_practice`
+ORDER BY Salary ASC, Name ASC
+LIMIT 5;
+
+
+-- Q52. Count employees in each department.
+-- Show department with lowest employee count first.
+-- If count is same, sort by department name.
+
+SELECT
+    Department,
+    COUNT(*) AS Total_Employees
+FROM `Db_1.employees_practice`
+GROUP BY Department
+ORDER BY Total_Employees ASC, Department ASC;
+
