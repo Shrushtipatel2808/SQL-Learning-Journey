@@ -411,3 +411,125 @@ FROM `Db_1.employees_practice`
 GROUP BY Department
 ORDER BY Total_Employees ASC, Department ASC;
 
+
+
+-- HAVING - Practice Questions
+
+
+-- Q53. Display departments having more than 3 employees.
+SELECT
+    Department,
+    COUNT(*) AS emp
+FROM `Db_1.employees_practice`
+GROUP BY Department
+HAVING emp > 3;
+
+
+-- Q54. Display departments whose total salary is
+-- greater than 200000.
+SELECT
+    Department,
+    SUM(Salary) AS Total_Salary
+FROM `Db_1.employees_practice`
+GROUP BY Department
+HAVING Total_Salary > 200000;
+
+
+-- Q55. Display departments whose average salary
+-- is greater than 40000.
+SELECT
+    Department,
+    AVG(Salary) AS avg_Salary
+FROM `Db_1.employees_practice`
+GROUP BY Department
+HAVING avg_Salary > 40000;
+
+
+-- Q56. Display departments whose highest salary
+-- is greater than 70000.
+SELECT
+    Department,
+    MAX(Salary) AS Highest_Salary
+FROM `Db_1.employees_practice`
+GROUP BY Department
+HAVING Highest_Salary > 70000;
+
+
+-- Q57. Display departments whose lowest salary
+-- is less than 25000.
+SELECT
+    Department,
+    MIN(Salary) AS Lowest_Salary
+FROM `Db_1.employees_practice`
+GROUP BY Department
+HAVING Lowest_Salary < 25000;
+
+
+-- Q58. Find departments having more than 3 employees
+-- and average salary greater than 40000.
+SELECT
+    Department,
+    COUNT(*) AS Total_Employees,
+    AVG(Salary) AS Average_Salary
+FROM `Db_1.employees_practice`
+GROUP BY Department
+HAVING Total_Employees > 3
+AND Average_Salary > 40000;
+
+
+-- Q59. Display departments where total salary is
+-- between 150000 and 300000.
+SELECT
+    Department,
+    SUM(Salary) AS Total_Salary
+FROM `Db_1.employees_practice`
+GROUP BY Department
+HAVING Total_Salary BETWEEN 150000 AND 300000;
+
+
+-- Q60. Find departments having more than 2 employees
+-- after considering only employees whose salary is
+-- greater than 30000.
+SELECT
+    Department,
+    COUNT(*) AS Total_Employees
+FROM `Db_1.employees_practice`
+WHERE Salary > 30000
+GROUP BY Department
+HAVING Total_Employees > 2;
+
+
+-- Q61. Display departments where minimum salary is
+-- greater than 25000 and maximum salary is less than 80000.
+SELECT
+    Department,
+    MIN(Salary) AS Lowest_Salary,
+    MAX(Salary) AS Highest_Salary
+FROM `Db_1.employees_practice`
+GROUP BY Department
+HAVING Lowest_Salary > 25000
+AND Highest_Salary < 80000;
+
+
+-- Q62. Find city and department combinations having
+-- more than 2 employees.
+SELECT
+    City,
+    Department,
+    COUNT(*) AS Total_Employees
+FROM `Db_1.employees_practice`
+GROUP BY City, Department
+HAVING Total_Employees > 2;
+
+
+-- Q63. Display departments having more than 2
+-- different employee ages.
+SELECT
+    Department,
+    COUNT(DISTINCT Age) AS Different_Ages
+FROM `Db_1.employees_practice`
+GROUP BY Department
+HAVING Different_Ages > 2;
+
+
+
